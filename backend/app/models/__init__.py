@@ -1,6 +1,6 @@
 """
-SmartERP - Enterprise Models Registry
-Registers all ORM models across Authentication, HR, Inventory, and Sales modules.
+SmartERP - Unified Enterprise Models Registry
+Registers all ORM models across Authentication, HR, Inventory, Sales, CRM, Procurement, and Finance.
 """
 from app.database.session import Base
 
@@ -27,6 +27,12 @@ from app.models.quotation import Quotation, QuotationItem
 from app.models.sales_order import SalesOrder, SalesOrderItem
 from app.models.invoice import Invoice, InvoiceItem
 from app.models.payment import Payment
+
+# CRM Management
+from app.models.crm import Lead, CustomerInteraction
+
+# Procurement & Finance
+from app.models.procurement import Supplier, PurchaseOrder, PurchaseOrderItem, Expense
 
 __all__ = [
     "Base",
@@ -62,4 +68,12 @@ __all__ = [
     "Invoice",
     "InvoiceItem",
     "Payment",
+    # CRM
+    "Lead",
+    "CustomerInteraction",
+    # Procurement & Finance
+    "Supplier",
+    "PurchaseOrder",
+    "PurchaseOrderItem",
+    "Expense",
 ]
