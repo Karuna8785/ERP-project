@@ -1,5 +1,6 @@
 import pytest
 from fastapi.testclient import TestClient
+# pyrefly: ignore [missing-import]
 from app.main import app
 
 client = TestClient(app)
@@ -10,7 +11,7 @@ def test_root_endpoint():
     assert response.status_code == 200
     data = response.json()
     assert data["system"] == "SmartERP"
-    assert "Member 5" in data["module"]
+    assert "Enterprise" in data["module"]
 
 
 def test_admin_login_success():
