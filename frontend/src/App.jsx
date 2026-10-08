@@ -10,14 +10,22 @@ import { Login } from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import { ProfilePage } from './pages/profile/ProfilePage';
 
-// Sales Module (Member 5)
+// Executive Cockpit
+import ExecutiveDashboard from './pages/dashboard/ExecutiveDashboard';
+
+// Sales Module
 import { SalesDashboard } from './pages/dashboard/SalesDashboard';
 import { QuotationsPage } from './pages/sales/QuotationsPage';
 import { SalesOrdersPage } from './pages/sales/SalesOrdersPage';
 import { InvoicesPage } from './pages/sales/InvoicesPage';
 import { PaymentsPage } from './pages/sales/PaymentsPage';
 
-// Inventory Module (Member 4)
+// CRM Module
+import CRMOverviewPage from './pages/crm/CRMOverviewPage';
+import LeadsPage from './pages/crm/LeadsPage';
+import CustomersPage from './pages/crm/CustomersPage';
+
+// Inventory Module
 import InventoryLayout from './pages/inventory/InventoryLayout';
 import InventoryOverview from './pages/inventory/InventoryOverview';
 import ProductsPage from './pages/inventory/ProductsPage';
@@ -27,16 +35,22 @@ import StockOverviewPage from './pages/inventory/StockOverviewPage';
 import StockMovementsPage from './pages/inventory/StockMovementsPage';
 import LowStockPage from './pages/inventory/LowStockPage';
 
-// HR Module (Member 2)
+// Procurement & Purchasing
+import ProcurementPage from './pages/procurement/ProcurementPage';
+
+// Finance & Accounting
+import FinancePage from './pages/finance/FinancePage';
+
+// HR Module
 import HRDashboard from './pages/hr/HRDashboard';
 import EmployeeList from './pages/hr/employees/EmployeeList';
 import DepartmentList from './pages/hr/departments/DepartmentList';
 import AttendanceList from './pages/hr/attendance/AttendanceList';
 import LeaveList from './pages/hr/leaves/LeaveList';
 
-// Placeholders
-import ComingSoonPage from './pages/placeholders/ComingSoonPage';
-import { UserCheck, Briefcase, BarChart3 } from 'lucide-react';
+// Security & Audit
+import AuditLogsPage from './pages/security/AuditLogsPage';
+import RolesPermissionsPage from './pages/security/RolesPermissionsPage';
 
 export default function App() {
   return (
@@ -51,19 +65,24 @@ export default function App() {
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>
               <Route element={<AppLayout />}>
-                {/* Dashboard */}
-                <Route path="/" element={<SalesDashboard />} />
+                {/* Executive Dashboard */}
+                <Route path="/" element={<ExecutiveDashboard />} />
                 <Route path="/dashboard" element={<Navigate to="/" replace />} />
                 <Route path="/profile" element={<ProfilePage />} />
 
-                {/* Sales Module (Member 5) */}
+                {/* Sales & Distribution */}
                 <Route path="/sales" element={<SalesDashboard />} />
                 <Route path="/sales/quotations" element={<QuotationsPage />} />
                 <Route path="/sales/orders" element={<SalesOrdersPage />} />
                 <Route path="/sales/invoices" element={<InvoicesPage />} />
                 <Route path="/sales/payments" element={<PaymentsPage />} />
 
-                {/* Inventory Module (Member 4) */}
+                {/* CRM & Pipeline */}
+                <Route path="/crm" element={<CRMOverviewPage />} />
+                <Route path="/crm/leads" element={<LeadsPage />} />
+                <Route path="/crm/customers" element={<CustomersPage />} />
+
+                {/* Inventory & Warehousing */}
                 <Route path="/inventory" element={<InventoryLayout />}>
                   <Route index element={<InventoryOverview />} />
                   <Route path="products" element={<ProductsPage />} />
@@ -74,47 +93,22 @@ export default function App() {
                   <Route path="low-stock" element={<LowStockPage />} />
                 </Route>
 
-                {/* HR Module (Member 2) */}
+                {/* Procurement & Suppliers */}
+                <Route path="/procurement" element={<ProcurementPage />} />
+
+                {/* Finance & Accounting */}
+                <Route path="/finance" element={<FinancePage />} />
+
+                {/* HR & Personnel */}
                 <Route path="/hr" element={<HRDashboard />} />
                 <Route path="/hr/employees" element={<EmployeeList />} />
                 <Route path="/hr/departments" element={<DepartmentList />} />
                 <Route path="/hr/attendance" element={<AttendanceList />} />
                 <Route path="/hr/leaves" element={<LeaveList />} />
 
-                {/* Placeholders */}
-                <Route
-                  path="/crm"
-                  element={
-                    <ComingSoonPage
-                      category="Customer"
-                      moduleName="Customer Relationship Management"
-                      description="Customers database, lead conversion pipeline, communication logs, and customer history."
-                      icon={UserCheck}
-                    />
-                  }
-                />
-                <Route
-                  path="/procurement"
-                  element={
-                    <ComingSoonPage
-                      category="Purchasing"
-                      moduleName="Procurement & Suppliers"
-                      description="Vendor management, purchase orders, goods receipt notes, and purchase invoices."
-                      icon={Briefcase}
-                    />
-                  }
-                />
-                <Route
-                  path="/reports"
-                  element={
-                    <ComingSoonPage
-                      category="Analytics"
-                      moduleName="Executive Dashboard & Analytics"
-                      description="Cross-module KPI summaries, inventory valuation reports, and executive analytics."
-                      icon={BarChart3}
-                    />
-                  }
-                />
+                {/* Security & Access */}
+                <Route path="/security/audit" element={<AuditLogsPage />} />
+                <Route path="/security/roles" element={<RolesPermissionsPage />} />
               </Route>
             </Route>
 

@@ -48,7 +48,7 @@ export const SalesDashboard = () => {
           <div>
             <div className="flex items-center space-x-2">
               <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
-                Member 5: Sales Module Active
+                Commercial Sales Operations
               </span>
               <span className="text-xs text-slate-400">SmartERP System</span>
             </div>
