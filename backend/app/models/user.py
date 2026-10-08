@@ -70,5 +70,6 @@ class Permission(Base):
     code = Column(String(100), unique=True, index=True, nullable=False)
     module = Column(String(100), nullable=True, default="CORE")
     description = Column(String(255), nullable=True)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=True)
 
     roles = relationship("Role", secondary=role_permissions, back_populates="permissions")
