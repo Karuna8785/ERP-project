@@ -1,0 +1,22 @@
+{
+  "name": "smarterp-enterprise",
+  "version": "1.1.0",
+  "private": true,
+  "description": "SmartERP Enterprise Resource Planning Suite",
+  "scripts": {
+    "start": "python main.py",
+    "build": "npm --prefix frontend run build",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "python main.py",
+    "lint": "npm --prefix frontend run lint",
+    "test": "pytest tests"
+  },
+  "keywords": [
+    "erp",
+    "enterprise",
+    "fastapi",
+    "react",
+    "vite"
+  ],
+  "author": "SmartERP Enterprise Team"
+}
