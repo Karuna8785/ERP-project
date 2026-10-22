@@ -262,6 +262,31 @@ modules = [
         "name": "financial_consolidation",
         "title": "Multi-Entity Financial Consolidation & Reporting",
         "entities": ["ConsolidationEntityGroup", "IntercompanyEliminationEntry", "ConsolidatedTrialBalance", "CurrencyTranslationRate", "MinorityInterestShare", "JointVentureEquityShare", "FinancialAdjustmentVoucher", "GoodwillImpairmentSchedule", "SegmentalReportingUnit", "ConsolidatedCashFlow", "StatutoryBalanceSheet", "ConsolidatedIncomeStatement", "AuditTrailElimination", "TaxProvisioningConsolidated", "FinancialClosingChecklist", "ExecutiveBoardFinancialReport"],
+    },
+    {
+        "name": "corporate_governance",
+        "title": "Board Governance & Shareholder Proxy Resolutions",
+        "entities": ["BoardResolutionVote", "ShareholderProxyFiling", "CommitteeMeetingCharter", "DirectorFiduciaryDuty", "AnnualGeneralMeetingNotice", "ExecutiveSuccessionMatrix", "StatutoryFilingDisclosure", "ConflictOfInterestDeclaration", "ShareholderProposalEntry", "MinutesOfMeetingDoc", "BoardMemberEvaluation", "DelegationOfAuthorityRule", "WhistleblowerTriageCase", "FiduciaryRiskAssessment", "InvestorRelationsRelease", "CorporateSealRegister"],
+    },
+    {
+        "name": "strategic_intelligence",
+        "title": "Market Landscaping & Competitive Intelligence",
+        "entities": ["MarketResearchReport", "CompetitorProductBenchmark", "SWOTAnalysisMatrix", "IndustryTrendSignal", "PatentLandscapeStudy", "PricingIntelligenceData", "CustomerWinLossInterview", "MarketShareEstimate", "StrategicPartnershipOpp", "MacroeconomicIndicator", "DisruptiveThreatAlert", "AcquisitionTargetProfile", "BrandPerceptionIndex", "ValueChainMapping", "ScenarioSimulationModel", "ExecutiveBriefingBrief"],
+    },
+    {
+        "name": "treasury_derivatives",
+        "title": "Financial Derivatives & Mark-to-Market Hedging",
+        "entities": ["InterestRateSwapContract", "FXForwardContract", "CommodityFutureHedge", "CurrencyOptionStrategy", "MarkToMarketValuation", "ISDAMasterAgreement", "CollateralMarginCall", "CreditDefaultSwapSpread", "HedgeEffectivenessTest", "GreeksRiskSensitivity", "CounterpartyCreditRisk", "YieldCurveInterpolation", "DerivativesSettlementEntry", "TreasuryExposureForecast", "RegulatoryEMIRFiling", "BasisRiskMeasurement"],
+    },
+    {
+        "name": "supply_chain_visibility",
+        "title": "Real-time IoT Telemetry & Supply Chain Visibility",
+        "entities": ["IoTSensorTelemetryPing", "ColdChainTempLogger", "RFIDPalletScanRecord", "GeofenceTransitEvent", "ShipmentShockSensorLog", "ContainerSealStatus", "SmartContractEscrowEvent", "CarrierLocationWaypoint", "DwellTimeExceedNotice", "PredictiveETAEstimate", "CarbonEmissionWaypoint", "CustomsClearanceMilestone", "TamperEvidentIncident", "WeatherDisruptionAlert", "MultimodalHandoverNote", "TrackAndTraceAuditLog"],
+    },
+    {
+        "name": "customer_experience",
+        "title": "Customer Experience (CX) & Sentiment Analytics",
+        "entities": ["CustomerJourneyMapStage", "CSATSurveySubmission", "NPSScorecardMetric", "SentimentNLPAnalysis", "CustomerEffortScoreCES", "VoiceOfCustomerFeedback", "OmnichannelTouchpointEvent", "CustomerChurnPrediction", "SupportResolutionTimeKPI", "PersonalizationProfile", "ExperienceGapIncident", "AdvocateReferralRecord", "RetentionCampaignTrigger", "FeedbackCategorizationRule", "CustomerDelightAction", "ExecutiveCXScorecard"],
     }
 ]
 
