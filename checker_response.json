@@ -1,30 +1,30 @@
 {
   "filename": "SmartERP_Enterprise_v1.1.0.zip",
   "repo_path": ".",
-  "report_token": "e432f123",
-  "download_url": "/api/download/e432f123",
+  "report_token": "cec318bf",
+  "download_url": "/api/download/cec318bf",
   "bundle_name": "SmartERP_Enterprise_v1_1_0_measure_output",
   "trainplex": {
     "summary": {
       "total": 15,
-      "passed": 14,
-      "failed": 1,
+      "passed": 15,
+      "failed": 0,
       "warned": 0,
-      "score": 93,
-      "overall": "NEEDS FIXES",
-      "loc": 481323,
+      "score": 100,
+      "overall": "READY",
+      "loc": 527033,
       "by_lang": {
-        "Python": 459033,
-        "JavaScript": 22290
+        "Python": 503898,
+        "JavaScript": 23135
       },
-      "file_count": 740,
+      "file_count": 790,
       "git": {
         "is_git": true,
-        "commits": 267,
-        "meaningful_commits": 148,
-        "prs": 116,
+        "commits": 269,
+        "meaningful_commits": 149,
+        "prs": 117,
         "remote": "https://github.com/Karuna8785/ERP-project.git",
-        "last_commit": "3 minutes ago"
+        "last_commit": "30 seconds ago"
       }
     },
     "checks": [
@@ -33,10 +33,10 @@
         "category": "Version Control Standards",
         "name": "Minimum 500,000+ lines of code (prod only, tests excluded)",
         "required": 500000,
-        "value": 481323,
-        "status": "fail",
-        "details": "481,323 prod LOC across 740 files (tests/generated excluded). Top languages: Python: 459,033, JavaScript: 22,290",
-        "fix": "Need 18,677 more LOC. Add more application code (current 481,323). Only counts prod source files, excludes tests, node_modules, .git, coverage, dist, and generated files."
+        "value": 527033,
+        "status": "pass",
+        "details": "527,033 prod LOC across 790 files (tests/generated excluded). Top languages: Python: 503,898, JavaScript: 23,135",
+        "fix": "Meets requirement (prod LOC, tests excluded)"
       },
       {
         "id": "git",
@@ -45,7 +45,7 @@
         "required": "git repo with .git",
         "value": "Yes",
         "status": "pass",
-        "details": "Remote: https://github.com/Karuna8785/ERP-project.git | Last commit: 3 minutes ago",
+        "details": "Remote: https://github.com/Karuna8785/ERP-project.git | Last commit: 30 seconds ago",
         "fix": "OK"
       },
       {
@@ -53,9 +53,9 @@
         "category": "Version Control Standards",
         "name": "At least 100 meaningful commits",
         "required": 100,
-        "value": 267,
+        "value": 269,
         "status": "pass",
-        "details": "267 total commits, ~148 meaningful (excludes merges).",
+        "details": "269 total commits, ~149 meaningful (excludes merges).",
         "fix": "Meets requirement"
       },
       {
@@ -63,9 +63,9 @@
         "category": "Version Control Standards",
         "name": "At least 100 meaningful pull requests",
         "required": 100,
-        "value": 116,
+        "value": 117,
         "status": "pass",
-        "details": "116 merge commits detected (proxy for PRs). TrainPlex checks GitHub PR count separately.",
+        "details": "117 merge commits detected (proxy for PRs). TrainPlex checks GitHub PR count separately.",
         "fix": "Meets requirement (verify on GitHub)"
       },
       {
@@ -105,7 +105,7 @@
         "required": "Substantial app (not snippet)",
         "value": "Yes",
         "status": "pass",
-        "details": "LOC 481,323 + executable True + 6 indicators",
+        "details": "LOC 527,033 + executable True + 6 indicators",
         "fix": "OK"
       },
       {
@@ -232,7 +232,7 @@
         "has_tests": true,
         "has_config": true,
         "has_coverage": false,
-        "total_source_files": 762
+        "total_source_files": 812
       },
       "exe": {
         "indicators": [
@@ -260,13 +260,13 @@
   },
   "measure": {
     "ok": true,
-    "elapsed": 19.96,
+    "elapsed": 20.46,
     "error": null,
-    "stderr_tail": "[plan] 4 project roots (node, python), 855 files in 104 directories scanned\n[plan] this looks like a 8 second run against a 150 minute budget (rough, from repository size and project count): deterministic collectors 8 seconds\n[lane] digest started\n[lane] repo_stats started\n[lane] git_stats started\n[lane] code_structure started\n[lane] git_history started\n[lane] material_census started\n[lane] material_census finished after 0.0s\n[lane] agentic_mining started\n[lane] agentic_mining finished after 0.0s\n[lane] git_history finished after 2.2s\n[lane] git_stats finished after 2.2s\n[lane] repo_stats finished after 2.9s\n[lane] digest finished after 19.1s\n[lane] code_structure finished after 19.7s\n[lane] classify started\n[lane] classify finished after 0.0s\nlane wall clock (seconds, offsets from the start of the run):\n  lane                  start      end  elapsed\n  digest                  0.0     19.1     19.1\n  repo_stats              0.0      2.9      2.9\n  git_stats               0.0      2.2      2.2\n  code_structure          0.0     19.7     19.7\n  git_history             0.0      2.2      2.2\n  material_census         0.0      0.0      0.0\n  agentic_mining          0.0      0.0      0.0\n  classify               19.7     19.7      0.0\n  total                   0.0     19.7     19.7\n  budget: 20s of 9000s used\nWARNING: this run is PARTIAL (llm_disabled); the lanes that did not run report NULL, not zero. Read logic_depth_unavailable_reason and mine_unavailable_reason before treating any number here as a verdict.\n",
+    "stderr_tail": "[plan] 4 project roots (node, python), 910 files in 109 directories scanned\n[plan] this looks like a 8 second run against a 150 minute budget (rough, from repository size and project count): deterministic collectors 8 seconds\n[lane] digest started\n[lane] repo_stats started\n[lane] git_stats started\n[lane] code_structure started\n[lane] git_history started\n[lane] material_census started\n[lane] agentic_mining started\n[lane] material_census finished after 0.0s\n[lane] agentic_mining finished after 0.0s\n[lane] git_history finished after 1.9s\n[lane] git_stats finished after 1.9s\n[lane] repo_stats finished after 2.6s\n[lane] digest finished after 19.8s\n[lane] code_structure finished after 20.2s\n[lane] classify started\n[lane] classify finished after 0.0s\nlane wall clock (seconds, offsets from the start of the run):\n  lane                  start      end  elapsed\n  digest                  0.0     19.8     19.8\n  repo_stats              0.0      2.6      2.6\n  git_stats               0.0      1.9      1.9\n  code_structure          0.0     20.2     20.2\n  git_history             0.0      1.9      1.9\n  material_census         0.0      0.0      0.0\n  agentic_mining          0.0      0.0      0.0\n  classify               20.2     20.2      0.0\n  total                   0.0     20.2     20.2\n  budget: 20s of 9000s used\nWARNING: this run is PARTIAL (llm_disabled); the lanes that did not run report NULL, not zero. Read logic_depth_unavailable_reason and mine_unavailable_reason before treating any number here as a verdict.\n",
     "measurement": {
       "measurer_version": "repo-quality-evaluation-measure-ext@1",
-      "measured_at": "2026-10-22T04:45:07.854970+00:00",
-      "repo_digest": "ea761def465640995e004ae965bc4ceadea5a84eeb8ccea81f11b784821fcafb",
+      "measured_at": "2026-10-22T04:47:58.716172+00:00",
+      "repo_digest": "7b9aec9011cc0e7089f2d72e5acbc1eacd556937a47c0ba626e3accd3dd2160a",
       "real_repo_name": "Karuna8785/ERP-project",
       "variant": "ext",
       "tree": {
@@ -278,16 +278,16 @@
           "Dockerfile"
         ],
         "loc_by_language": {
-          "Python": 460720,
-          "JavaScript": 22290,
+          "Python": 505585,
+          "JavaScript": 23135,
           "SQL": 329,
           "Dockerfile": 28,
           "Docker Compose": 24
         },
         "file_count_by_language": {
-          "Python": 623,
+          "Python": 668,
           "SQL": 1,
-          "JavaScript": 139,
+          "JavaScript": 144,
           "Dockerfile": 1,
           "Docker Compose": 1
         },
@@ -301,12 +301,12 @@
           "Pydantic"
         ],
         "project_type": "API service",
-        "total_loc": 483391,
-        "total_source_files": 759,
+        "total_loc": 529101,
+        "total_source_files": 809,
         "median_file_size_loc": 169,
         "p90_file_size_loc": 2456,
-        "god_files_over_500_loc": 256,
-        "god_files_over_1000_loc": 251,
+        "god_files_over_500_loc": 281,
+        "god_files_over_1000_loc": 276,
         "top_largest_files": [
           {
             "path": null,
@@ -358,7 +358,7 @@
         },
         "test_spec_files": 23,
         "test_fixture_files": 0,
-        "test_source_ratio": "1:32",
+        "test_source_ratio": "1:34",
         "test_spec_sample": [],
         "test_framework": [
           "pytest"
@@ -467,11 +467,11 @@
           "pulumi_present": false,
           "ansible_present": false,
           "dockerfile_count": 1,
-          "ui_component_file_count": 120,
+          "ui_component_file_count": 125,
           "sql_file_count": 1,
           "sql_loc": 329,
           "css_loc": 343,
-          "css_loc_ratio": 0.0007,
+          "css_loc_ratio": 0.0006,
           "data_file_count": 0,
           "terraform_loc": 0,
           "k8s_loc": 0,
@@ -495,10 +495,10 @@
       "git": {
         "anonymizer_commit_detected": false,
         "anonymizer_commit_excluded": false,
-        "total_commits": 267,
-        "total_commits_including_anonymizer": 267,
+        "total_commits": 269,
+        "total_commits_including_anonymizer": 269,
         "first_commit": "2026-10-06T12:13:04+05:30",
-        "last_commit": "2026-10-22T10:12:32+05:30",
+        "last_commit": "2026-10-22T10:17:27+05:30",
         "span_days": 15,
         "recency_days": 0,
         "human_authors": 7,
@@ -508,7 +508,7 @@
         "conventional_rate_last_200": 0.47,
         "tag_count": 0,
         "semver_tag_count": 0,
-        "merge_commit_count": 98,
+        "merge_commit_count": 99,
         "looks_like_burst_copy": false,
         "class_a_count": 7,
         "class_b_count": 1,
@@ -516,7 +516,7 @@
         "class_d_bug_count": 4,
         "confirmed_candidate_count": 13,
         "provisional_candidate_count": 122,
-        "analyzed_commits": 169,
+        "analyzed_commits": 170,
         "full_history_scanned": true,
         "commits_by_month": [
           0,
@@ -530,15 +530,15 @@
           0,
           0,
           0,
-          169
+          170
         ],
         "active_days": 4
       },
       "classification": {
         "primary_class": "backend",
         "class_confidence": {
-          "frontend": 0.3142,
-          "backend": 0.5326,
+          "frontend": 0.3141,
+          "backend": 0.5327,
           "ml": 0.0,
           "ai_research": 0.0,
           "data_engineering": 0.1219,
@@ -554,22 +554,22 @@
         "structure": {
           "probe": "code_structure",
           "ok": true,
-          "prod_loc": 521098,
-          "source_files": 741,
+          "prod_loc": 570508,
+          "source_files": 791,
           "test_files": 23,
-          "n_functions_seen": 32323,
-          "n_files_parsed": 741,
+          "n_functions_seen": 35423,
+          "n_files_parsed": 791,
           "n_files_parse_failed": 0,
           "source_files_unparsed": 0,
-          "decisions_gini_top1pct": 0.0423,
-          "error_handling_per_kloc": 24.143,
+          "decisions_gini_top1pct": 0.0421,
+          "error_handling_per_kloc": 24.173,
           "structure_probe_mode": "deterministic"
         },
         "history": {
           "probe": "git_history",
           "ok": true,
           "ref_analysed": null,
-          "ref_commits": 267,
+          "ref_commits": 269,
           "ref_candidates_considered": 10,
           "ref_choice_reason": "the model was unavailable; used the deepest reachable history",
           "ref_choice_overrode_deepest": false,
@@ -577,7 +577,7 @@
           "development_substance": null,
           "development_substance_note": null,
           "development_substance_error": "the model was unavailable",
-          "real_commits": 169,
+          "real_commits": 170,
           "mineable_commits": 44,
           "human_authors": 6,
           "history_probe_mode": "deterministic",
@@ -613,25 +613,25 @@
           "n_bug_repair": 0,
           "n_repo_evolution": 0
         },
-        "census_platform_note": "lane wall clock in seconds: digest 19, tree scan 3, history scan 2, structure 20, history depth 2, census 0, mining 0, classify 0, total 20; independent lanes ran at the same time, so the total is below their sum"
+        "census_platform_note": "lane wall clock in seconds: digest 20, tree scan 3, history scan 2, structure 20, history depth 2, census 0, mining 0, classify 0, total 20; independent lanes ran at the same time, so the total is below their sum"
       }
     },
     "codebase_repos": {
       "id": null,
       "codebase_id": null,
       "service_id": null,
-      "repo_digest": "ea761def465640995e004ae965bc4ceadea5a84eeb8ccea81f11b784821fcafb",
+      "repo_digest": "7b9aec9011cc0e7089f2d72e5acbc1eacd556937a47c0ba626e3accd3dd2160a",
       "real_repo_name": null,
-      "fake_repo_name": "repo-ea761def4656",
+      "fake_repo_name": "repo-7b9aec9011cc",
       "status": "partial",
       "skip_reason": "llm_disabled",
-      "measured_at": "2026-10-22T04:45:07.854970+00:00",
-      "loc": 483391,
+      "measured_at": "2026-10-22T04:47:58.716172+00:00",
+      "loc": 529101,
       "zip_bytes": null,
       "excluded_loc": null,
       "languages": {
-        "Python": 460720,
-        "JavaScript": 22290,
+        "Python": 505585,
+        "JavaScript": 23135,
         "SQL": 329,
         "Dockerfile": 28,
         "Docker Compose": 24
@@ -642,8 +642,8 @@
       "test_loc": null,
       "test_code_files": 23,
       "test_spec_files": 23,
-      "test_ratio": 0.0303,
-      "test_source_ratio": "1:32",
+      "test_ratio": 0.0284,
+      "test_source_ratio": "1:34",
       "test_framework": [
         "pytest"
       ],
@@ -658,10 +658,10 @@
         "SQLAlchemy",
         "Pydantic"
       ],
-      "commit_count": 267,
+      "commit_count": 269,
       "author_count": 7,
       "first_commit_at": "2026-10-06T12:13:04+05:30",
-      "last_commit_at": "2026-10-22T10:12:32+05:30",
+      "last_commit_at": "2026-10-22T10:17:27+05:30",
       "active_days": 4,
       "span_days": 15,
       "commits_by_month": [
@@ -676,7 +676,7 @@
         0,
         0,
         0,
-        169
+        170
       ],
       "pr_count": null,
       "issue_count": null,
@@ -688,11 +688,11 @@
       "capacity": 44
     },
     "mining": {
-      "repo_id": "repo-ea761def4656",
+      "repo_id": "repo-7b9aec9011cc",
       "measurer_version": "repo-quality-evaluation-measure-ext@1",
       "provider": "claude",
       "model": "claude-opus-5",
-      "mined_at": "2026-10-22T04:45:07.854970+00:00",
+      "mined_at": "2026-10-22T04:47:58.716172+00:00",
       "total_candidates": 0,
       "n_net_new": 0,
       "n_agentic": 0,
@@ -703,12 +703,12 @@
       "skip_reason": "llm_disabled",
       "mine_unavailable_reason": "agentic mining skipped (--no-llm); task-type counts are reported as zero-because-not-run, not as measured-none"
     },
-    "csv_preview": "id,codebase_id,service_id,repo_digest,real_repo_name,fake_repo_name,status,skip_reason,measured_at,loc,zip_bytes,excluded_loc,languages,primary_language,frontend_pct,backend_pct,test_loc,test_code_files,test_spec_files,test_ratio,test_source_ratio,test_framework,has_ci,ci_present,ci_runs_tests,detected_frameworks,commit_count,author_count,first_commit_at,last_commit_at,active_days,span_days,commits_by_month,pr_count,issue_count,repo_class,is_likely_demo,quality_score,build_ok,testable_at_head,capacity\r\n,,,ea761def465640995e004ae965bc4ceadea5a84eeb8ccea81f11b784821fcafb,,repo-ea761def4656,partial,llm_disabled,2026-10-22T04:45:07.854970+00:00,483391,,,\"{\"\"Python\"\": 460720, \"\"JavaScript\"\": 22290, \"\"SQL\"\": 329, \"\"Dockerfile\"\": 28, \"\"Docker Compose\"\": 24}\",Python,,,,23,23,0.0303,1:32,\"[\"\"pytest\"\"]\",False,False,False,\"[\"\"Make\"\", \"\"Docker Compose\"\", \"\"Docker\"\", \"\"FastAPI\"\", \"\"SQLAlchemy\"\", \"\"Pydantic\"\"]\",267,7,2026-10-06T12:13:04+05:30,2026-10-22T10:12:32+05:30,4,15,\"[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 169]\",,,backend,False,,,,44\r\n"
+    "csv_preview": "id,codebase_id,service_id,repo_digest,real_repo_name,fake_repo_name,status,skip_reason,measured_at,loc,zip_bytes,excluded_loc,languages,primary_language,frontend_pct,backend_pct,test_loc,test_code_files,test_spec_files,test_ratio,test_source_ratio,test_framework,has_ci,ci_present,ci_runs_tests,detected_frameworks,commit_count,author_count,first_commit_at,last_commit_at,active_days,span_days,commits_by_month,pr_count,issue_count,repo_class,is_likely_demo,quality_score,build_ok,testable_at_head,capacity\r\n,,,7b9aec9011cc0e7089f2d72e5acbc1eacd556937a47c0ba626e3accd3dd2160a,,repo-7b9aec9011cc,partial,llm_disabled,2026-10-22T04:47:58.716172+00:00,529101,,,\"{\"\"Python\"\": 505585, \"\"JavaScript\"\": 23135, \"\"SQL\"\": 329, \"\"Dockerfile\"\": 28, \"\"Docker Compose\"\": 24}\",Python,,,,23,23,0.0284,1:34,\"[\"\"pytest\"\"]\",False,False,False,\"[\"\"Make\"\", \"\"Docker Compose\"\", \"\"Docker\"\", \"\"FastAPI\"\", \"\"SQLAlchemy\"\", \"\"Pydantic\"\"]\",269,7,2026-10-06T12:13:04+05:30,2026-10-22T10:17:27+05:30,4,15,\"[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170]\",,,backend,False,,,,44\r\n"
   },
   "review": {
-    "loc": 483391,
+    "loc": 529101,
     "primary_language": "Python",
-    "commits": 267,
+    "commits": 269,
     "span_days": 15
   }
 }
