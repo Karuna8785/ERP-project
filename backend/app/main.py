@@ -504,6 +504,24 @@ app.include_router(finance.router, prefix=api_v1_prefix)
 # 7. Executive Analytics & Reports
 app.include_router(reports.router, prefix=api_v1_prefix)
 
+# 8. Enterprise Titan Suite Dynamic Modules
+try:
+    import importlib
+    import os
+    _modules_dir = os.path.join(os.path.dirname(__file__), "modules")
+    if os.path.exists(_modules_dir):
+        for _m_name in sorted(os.listdir(_modules_dir)):
+            _mod_pkg = os.path.join(_modules_dir, _m_name)
+            if os.path.isdir(_mod_pkg) and os.path.exists(os.path.join(_mod_pkg, "__init__.py")):
+                try:
+                    _mod = importlib.import_module(f"app.modules.{_m_name}")
+                    if hasattr(_mod, "router"):
+                        app.include_router(_mod.router, prefix=api_v1_prefix)
+                except Exception as _ex:
+                    logger.debug(f"Module {_m_name} router not loaded: {_ex}")
+except Exception as _ex:
+    logger.debug(f"Enterprise modules registration error: {_ex}")
+
 
 @app.get("/", tags=["Health"])
 def root():
@@ -532,3 +550,13 @@ def root():
 @app.get("/health", tags=["Health"])
 def health_check():
     return {"status": "healthy", "service": settings.PROJECT_NAME}
+
+
+@app.get("/download/zip", tags=["Export"])
+@app.get("/SmartERP_Enterprise_v1.1.0.zip", tags=["Export"])
+def download_project_zip():
+    from fastapi.responses import FileResponse
+    import os
+    zip_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "SmartERP_Enterprise_v1.1.0.zip"))
+    return FileResponse(zip_path, media_type="application/zip", filename="SmartERP_Enterprise_v1.1.0.zip")
+
