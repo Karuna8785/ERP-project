@@ -1,0 +1,691 @@
+{
+  "filename": "SmartERP_Enterprise_v1.1.0.zip",
+  "repo_path": ".",
+  "report_token": "338b2fc3",
+  "download_url": "/api/download/338b2fc3",
+  "bundle_name": "SmartERP_Enterprise_v1_1_0_measure_output",
+  "trainplex": {
+    "summary": {
+      "total": 15,
+      "passed": 10,
+      "failed": 3,
+      "warned": 2,
+      "score": 67,
+      "overall": "NOT READY",
+      "loc": 22865,
+      "by_lang": {
+        "Python": 9025,
+        "JavaScript": 13840
+      },
+      "file_count": 235,
+      "git": {
+        "is_git": true,
+        "commits": 210,
+        "meaningful_commits": 120,
+        "prs": 88,
+        "remote": "https://github.com/Karuna8785/ERP-project.git",
+        "last_commit": "9 days ago"
+      }
+    },
+    "checks": [
+      {
+        "id": "loc",
+        "category": "Version Control Standards",
+        "name": "Minimum 500,000+ lines of code (prod only, tests excluded)",
+        "required": 500000,
+        "value": 22865,
+        "status": "fail",
+        "details": "22,865 prod LOC across 235 files (tests/generated excluded). Top languages: Python: 9,025, JavaScript: 13,840",
+        "fix": "Need 477,135 more LOC. Add more application code (current 22,865). Only counts prod source files, excludes tests, node_modules, .git, coverage, dist, and generated files."
+      },
+      {
+        "id": "git",
+        "category": "Version Control Standards",
+        "name": "Git-based repository",
+        "required": "git repo with .git",
+        "value": "Yes",
+        "status": "pass",
+        "details": "Remote: https://github.com/Karuna8785/ERP-project.git | Last commit: 9 days ago",
+        "fix": "OK"
+      },
+      {
+        "id": "commits",
+        "category": "Version Control Standards",
+        "name": "At least 100 meaningful commits",
+        "required": 100,
+        "value": 210,
+        "status": "pass",
+        "details": "210 total commits, ~120 meaningful (excludes merges).",
+        "fix": "Meets requirement"
+      },
+      {
+        "id": "prs",
+        "category": "Version Control Standards",
+        "name": "At least 100 meaningful pull requests",
+        "required": 100,
+        "value": 88,
+        "status": "fail",
+        "details": "88 merge commits detected (proxy for PRs). TrainPlex checks GitHub PR count separately.",
+        "fix": "Create PRs on GitHub/GitLab (feature branches \u2192 merge). Local git needs merge commits: `git merge --no-ff feature`."
+      },
+      {
+        "id": "collaborators",
+        "category": "Version Control Standards",
+        "name": "At least 2 collaborators (distinct commit authors)",
+        "required": 2,
+        "value": 7,
+        "status": "pass",
+        "details": "7 distinct authors: chnagraju4@gmail.com, inventory@smarterp.local, karunagujjalapudi8@gmail.com, pavankalyanvallabhaneni8@gmail.com, pernamittasumanthreddy@gmail.com",
+        "fix": "Invite collaborators on GitHub/GitLab and have them commit (each author needs at least one commit). Solo repos get a warning."
+      },
+      {
+        "id": "executable",
+        "category": "Code Quality & Documentation",
+        "name": "Executable project",
+        "required": "Has entry point / build system",
+        "value": "requirements.txt",
+        "status": "warn",
+        "details": "Found: requirements.txt",
+        "fix": "Add Dockerfile, package.json scripts (start/build), Makefile, or entry point (main.py/app.py)."
+      },
+      {
+        "id": "tests",
+        "category": "Code Quality & Documentation",
+        "name": "Test coverage included",
+        "required": "At least one test file",
+        "value": 22,
+        "status": "pass",
+        "details": "22 test files. Config: yes | Coverage: no | Sample: test_smarterp.db, backend/tests/conftest.py, backend/tests/test_auth.py",
+        "fix": "Add coverage reporting for stronger score"
+      },
+      {
+        "id": "prototype",
+        "category": "Code Quality & Documentation",
+        "name": "Complete application or working prototype",
+        "required": "Substantial app (not snippet)",
+        "value": "No",
+        "status": "warn",
+        "details": "LOC 22,865 + executable False + 1 indicators",
+        "fix": "Ensure project is a runnable app, not just scripts. Include app logic, not boilerplate."
+      },
+      {
+        "id": "readme",
+        "category": "Code Quality & Documentation",
+        "name": "README with build/install/run instructions",
+        "required": "README.md with install+run docs",
+        "value": "README.md",
+        "status": "pass",
+        "details": "README.md | install: True | run: True | build: True | 165 lines",
+        "fix": "OK"
+      },
+      {
+        "id": "deps",
+        "category": "Code Quality & Documentation",
+        "name": "Dependency documentation",
+        "required": "Manifest + lockfile",
+        "value": "2 manifests, 1 lockfiles",
+        "status": "pass",
+        "details": "Manifests: frontend/package.json, requirements.txt | Lockfiles: frontend/package-lock.json",
+        "fix": "OK"
+      },
+      {
+        "id": "language",
+        "category": "Repository Info",
+        "name": "Supported language",
+        "required": "One of: Python, Java, JS/TS, Go, Rust, etc.",
+        "value": "JavaScript",
+        "status": "pass",
+        "details": "Primary: JavaScript | All: Python, JavaScript",
+        "fix": "OK"
+      },
+      {
+        "id": "license",
+        "category": "Ownership Rules",
+        "name": "No open source license (MIT/Apache/GPL)",
+        "required": "Proprietary (no OS license)",
+        "value": "Unknown / Proprietary (no LICENSE file)",
+        "status": "pass",
+        "details": "File: none | Type: Unknown / Proprietary (no LICENSE file) | Package.json license: none",
+        "fix": "OK - proprietary"
+      },
+      {
+        "id": "secrets",
+        "category": "Ownership Rules",
+        "name": "No sensitive data (API keys, secrets, PII)",
+        "required": "Zero secrets, no committed .env",
+        "value": "0 hits, 3 env files",
+        "status": "fail",
+        "details": "Env files: .env, .env.example, backend/.env.example | Hits: none",
+        "fix": "Remove .env files from git (`git rm --cached .env`), add to .gitignore, rotate any exposed keys, use example.env instead."
+      },
+      {
+        "id": "ai",
+        "category": "Ownership Rules",
+        "name": "Not fully AI-generated",
+        "required": "Human-authored with history",
+        "value": "Heuristic pass",
+        "status": "pass",
+        "details": "Uniform messages: False | Burst: True | Note: Heuristic only",
+        "fix": "OK"
+      },
+      {
+        "id": "fork",
+        "category": "Ownership Rules",
+        "name": "Not forked/derived",
+        "required": "Original work",
+        "value": "https://github.com/Karuna8785/ERP-project.git",
+        "status": "pass",
+        "details": "Cannot auto-verify fork status fully; ensure repo is original and not cloned/copied.",
+        "fix": "Declare original authorship; remove third-party code you don't own."
+      }
+    ],
+    "details": {
+      "readme": {
+        "exists": true,
+        "path": "README.md",
+        "has_install": true,
+        "has_run": true,
+        "has_build": true,
+        "loc": 165,
+        "content_preview": "# SmartERP \u2014 Unified Enterprise Resource Planning Platform\n\nSmartERP is a modern, cohesive, full-stack Enterprise Resource Planning (ERP) platform designed for commercial sales execution, customer relationship management (CRM), multi-warehouse inventory control, human resource administration, procurement & vendor logistics, and financial cash-flow governance.\n\n---\n\n## 1. Executive System Overview & Modules\n\nSmartERP unifies seven enterprise modules into one integrated software suite with shared data contracts, automated workflow triggers, and fine-grained Role-Based Access Control (RBAC):\n\n1. **Executive Cockpit & Analytics (`/`)**: Real-time cross-enterprise business intelligence, gross invoiced volume, operating spend, stock health, workforce metrics, and visual monthly financial trends.\n2. **Sales & Distribution (`/sales`)**: Full commercial lifecycle \u2014 quotations, sales orders, automated invoicing, customer payment receipts, printable tax vouchers, and pipeline analytics.\n3. **CRM & Pipeline (`/crm`)**: Prospect qualification funnel (`New` \u2192 `Contacted` \u2192 `Qualified` \u2192 `Proposal` \u2192 `Won`), one-click lead-to-account conversion, multi-channel touchpoint logging (calls, emails, meetings, notes), and customer activity timelines.\n4. **Inventory & Warehousing (`/inventory`)**: Master product catalog, categories, multi-warehouse stock tracking, stock transfers, inbound/outbound adjustments, and automated low-stock warnings with reorder triggers.\n5. **Procurement & Vendors (`/procurement`)**: Approved supplier directory, purchase order generation, goods receipt notes (GRN), and automated warehouse inventory incrementing upon delivery receipt.\n6. **Finance & Accounting (`/finance`)**: Real-time cash position, accounts receivable (AR), accounts payable (AP) tracking, operating expense ledger, and cash-flow summaries.\n7. **Human Resources & Workforce (`/hr`)**: Employee directory, organizational departments, daily check-in/out attendance logging, and multi-tier leave reque"
+      },
+      "deps": {
+        "manifests": [
+          {
+            "file": "frontend/package.json",
+            "manager": "Node.js"
+          },
+          {
+            "file": "requirements.txt",
+            "manager": "Python pip"
+          }
+        ],
+        "lockfiles": [
+          "frontend/package-lock.json"
+        ],
+        "has_deps": true
+      },
+      "tests": {
+        "test_files": [
+          "test_smarterp.db",
+          "backend/tests/conftest.py",
+          "backend/tests/test_auth.py",
+          "backend/tests/test_categories.py",
+          "backend/tests/test_hr.py",
+          "backend/tests/test_integration.py",
+          "backend/tests/test_low_stock.py",
+          "backend/tests/test_products.py",
+          "backend/tests/test_stock_transactions.py",
+          "backend/tests/test_stock_transfers.py",
+          "backend/tests/test_warehouses.py",
+          "backend/tests/__init__.py",
+          "tests/test_audit_logs.py",
+          "tests/test_auth.py",
+          "tests/test_crm.py",
+          "tests/test_order_to_cash_flow.py",
+          "tests/test_performance_benchmarks.py",
+          "tests/test_procurement_finance.py",
+          "tests/test_roles_permissions.py",
+          "tests/test_sales_invoices.py"
+        ],
+        "test_file_count": 22,
+        "has_tests": true,
+        "has_config": true,
+        "has_coverage": false,
+        "total_source_files": 256
+      },
+      "exe": {
+        "indicators": [
+          "requirements.txt"
+        ],
+        "is_executable": false
+      },
+      "lic": {
+        "file": null,
+        "type": "Unknown / Proprietary (no LICENSE file)",
+        "is_open_source": false,
+        "pkg_license": null
+      },
+      "secrets": {
+        "env_files": [
+          ".env",
+          ".env.example",
+          "backend/.env.example"
+        ],
+        "secret_hits": [],
+        "has_secrets": true
+      }
+    }
+  },
+  "measure": {
+    "ok": true,
+    "elapsed": 2.13,
+    "error": null,
+    "stderr_tail": "[plan] 3 project roots (node, python), 298 files in 51 directories scanned\n[plan] this looks like a 6 second run against a 150 minute budget (rough, from repository size and project count): deterministic collectors 6 seconds\n[lane] digest started\n[lane] repo_stats started\n[lane] git_stats started\n[lane] code_structure started\n[lane] git_history started\n[lane] material_census started\n[lane] material_census finished after 0.0s\n[lane] agentic_mining started\n[lane] agentic_mining finished after 0.0s\n[lane] git_stats finished after 1.2s\n[lane] git_history finished after 1.4s\n[lane] repo_stats finished after 1.4s\n[lane] code_structure finished after 1.9s\n[lane] digest finished after 1.9s\n[lane] classify started\n[lane] classify finished after 0.0s\nlane wall clock (seconds, offsets from the start of the run):\n  lane                  start      end  elapsed\n  digest                  0.0      1.9      1.9\n  repo_stats              0.0      1.4      1.4\n  git_stats               0.0      1.2      1.2\n  code_structure          0.0      1.9      1.9\n  git_history             0.0      1.4      1.4\n  material_census         0.0      0.0      0.0\n  agentic_mining          0.0      0.0      0.0\n  classify                1.9      1.9      0.0\n  total                   0.0      1.9      1.9\n  budget: 2s of 9000s used\nWARNING: this run is PARTIAL (llm_disabled); the lanes that did not run report NULL, not zero. Read logic_depth_unavailable_reason and mine_unavailable_reason before treating any number here as a verdict.\n",
+    "measurement": {
+      "measurer_version": "repo-quality-evaluation-measure-ext@1",
+      "measured_at": "2026-10-22T04:29:08.681600+00:00",
+      "repo_digest": "057ecd19a2a00f0c8158c8ce180f81bd72ff107a9314254600b746144db59849",
+      "real_repo_name": "Karuna8785/ERP-project",
+      "variant": "ext",
+      "tree": {
+        "schema_version": "1.0",
+        "primary_language": "JavaScript",
+        "secondary_languages": [
+          "Python",
+          "SQL"
+        ],
+        "loc_by_language": {
+          "JavaScript": 13840,
+          "Python": 10685,
+          "SQL": 329
+        },
+        "file_count_by_language": {
+          "Python": 167,
+          "SQL": 1,
+          "JavaScript": 89
+        },
+        "jvm_dotnet_loc_share": 0.0,
+        "detected_frameworks": [
+          "FastAPI",
+          "SQLAlchemy",
+          "Pydantic"
+        ],
+        "project_type": "API service",
+        "total_loc": 24854,
+        "total_source_files": 251,
+        "median_file_size_loc": 52,
+        "p90_file_size_loc": 272,
+        "god_files_over_500_loc": 4,
+        "god_files_over_1000_loc": 0,
+        "top_largest_files": [
+          {
+            "path": null,
+            "loc": 930
+          },
+          {
+            "path": null,
+            "loc": 735
+          },
+          {
+            "path": null,
+            "loc": 583
+          },
+          {
+            "path": null,
+            "loc": 547
+          },
+          {
+            "path": null,
+            "loc": 496
+          },
+          {
+            "path": null,
+            "loc": 482
+          },
+          {
+            "path": null,
+            "loc": 453
+          },
+          {
+            "path": null,
+            "loc": 418
+          },
+          {
+            "path": null,
+            "loc": 395
+          },
+          {
+            "path": null,
+            "loc": 387
+          }
+        ],
+        "generated_files_excluded": 0,
+        "iac_loc": 0,
+        "iac_file_count": 0,
+        "iac_loc_by_type": {},
+        "test_spec_files": 22,
+        "test_fixture_files": 0,
+        "test_source_ratio": "1:10",
+        "test_spec_sample": [],
+        "test_framework": [
+          "pytest"
+        ],
+        "test_config_files": [
+          "pytest.ini"
+        ],
+        "coverage_tooling": null,
+        "coverage_threshold": null,
+        "package_managers": [
+          "pip/poetry/uv"
+        ],
+        "manifests_found": [
+          "requirements.txt"
+        ],
+        "lockfiles_found": [
+          "other"
+        ],
+        "lockfiles_expected": [
+          "poetry.lock / Pipfile.lock / uv.lock / requirements.txt (pinned)"
+        ],
+        "direct_runtime_deps": 0,
+        "direct_dev_deps": 0,
+        "total_transitive_deps": 212,
+        "dep_update_tooling": "none",
+        "ci_systems": [],
+        "ci_config_files": [],
+        "ci_runs_tests": false,
+        "ci_runs_lint": false,
+        "ci_runs_typecheck": false,
+        "ci_has_deploy": false,
+        "ci_present": false,
+        "ci_analysis_method": "no_ci",
+        "hardcoded_secret_hits": null,
+        "env_files_committed": [],
+        "dep_audit_in_ci": false,
+        "input_validation_patterns": [
+          "pydantic"
+        ],
+        "linters_and_formatters": {
+          "Ruff": "[file]"
+        },
+        "has_lint_config": true,
+        "readme": "README.md",
+        "readme_loc": 127,
+        "readme_sections": [
+          "install",
+          "setup",
+          "run",
+          "test",
+          "environment",
+          "api"
+        ],
+        "changelog": null,
+        "contributing_guide": null,
+        "has_pr_template": false,
+        "has_issue_template": false,
+        "demo_signals": {
+          "name_lexicon_hit": null,
+          "strong_name_hit": null,
+          "known_demo_app": false,
+          "template_readme": false,
+          "scaffold_fingerprint": false,
+          "boilerplate_readme": false,
+          "authoritative_demo": false,
+          "static_name_family": false,
+          "static_content_family": false
+        },
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_devcontainer": false,
+        "has_nix": false,
+        "env_example_file": null,
+        "env_vars_referenced_in_source": [],
+        "env_vars_in_example": [],
+        "env_vars_missing_from_example": [],
+        "logging_framework": null,
+        "error_tracking": null,
+        "has_health_endpoint": false,
+        "has_metrics": true,
+        "class_signals": {
+          "dep_keyword_hits": {
+            "ml_libs": [],
+            "experiment_tracking": [],
+            "data_eng": [],
+            "security_libs": [],
+            "backend_frameworks": [
+              "fastapi"
+            ],
+            "frontend_frameworks": [],
+            "orm_db": [
+              "alembic",
+              "psycopg",
+              "sqlalchemy"
+            ],
+            "infra_libs": []
+          },
+          "notebook_count": 0,
+          "terraform_file_count": 0,
+          "terraform_present": false,
+          "k8s_manifest_count": 0,
+          "helm_present": false,
+          "pulumi_present": false,
+          "ansible_present": false,
+          "dockerfile_count": 0,
+          "ui_component_file_count": 70,
+          "sql_file_count": 1,
+          "sql_loc": 329,
+          "css_loc": 343,
+          "css_loc_ratio": 0.0136,
+          "data_file_count": 0,
+          "terraform_loc": 0,
+          "k8s_loc": 0,
+          "docker_compose_file_count": 0,
+          "docker_compose_loc": 0,
+          "helm_file_count": 0,
+          "helm_loc": 0,
+          "ansible_file_count": 0,
+          "ansible_loc": 0,
+          "cloudformation_file_count": 0,
+          "cloudformation_loc": 0,
+          "dockerfile_loc": 0,
+          "iac_loc": 0,
+          "iac_file_count": 0,
+          "iac_loc_by_type": {}
+        }
+      },
+      "git": {
+        "anonymizer_commit_detected": false,
+        "anonymizer_commit_excluded": false,
+        "total_commits": 210,
+        "total_commits_including_anonymizer": 210,
+        "first_commit": "2026-10-06T12:13:04+05:30",
+        "last_commit": "2026-10-13T11:20:42+05:30",
+        "span_days": 6,
+        "recency_days": 8,
+        "human_authors": 7,
+        "bot_authors": 0,
+        "bot_commit_count": 0,
+        "bot_commit_ratio": 0.0,
+        "conventional_rate_last_200": 0.49,
+        "tag_count": 0,
+        "semver_tag_count": 0,
+        "merge_commit_count": 70,
+        "looks_like_burst_copy": false,
+        "class_a_count": 7,
+        "class_b_count": 1,
+        "class_c_pre_count": 83,
+        "class_d_bug_count": 4,
+        "confirmed_candidate_count": 13,
+        "provisional_candidate_count": 96,
+        "analyzed_commits": 140,
+        "full_history_scanned": true,
+        "commits_by_month": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          140
+        ],
+        "active_days": 3
+      },
+      "classification": {
+        "primary_class": "backend",
+        "class_confidence": {
+          "frontend": 0.3354,
+          "backend": 0.5408,
+          "ml": 0.0,
+          "ai_research": 0.0,
+          "data_engineering": 0.1238,
+          "security": 0.0,
+          "infra": 0.0
+        },
+        "is_monorepo": false,
+        "is_likely_demo": false,
+        "demo_reasoning": []
+      },
+      "capacity": 41,
+      "ext_signals": {
+        "structure": {
+          "probe": "code_structure",
+          "ok": true,
+          "prod_loc": 25558,
+          "source_files": 236,
+          "test_files": 22,
+          "n_functions_seen": 1306,
+          "n_files_parsed": 236,
+          "n_files_parse_failed": 0,
+          "source_files_unparsed": 0,
+          "decisions_gini_top1pct": 0.154,
+          "error_handling_per_kloc": 17.842,
+          "structure_probe_mode": "deterministic"
+        },
+        "history": {
+          "probe": "git_history",
+          "ok": true,
+          "ref_analysed": null,
+          "ref_commits": 210,
+          "ref_candidates_considered": 10,
+          "ref_choice_reason": "the model was unavailable; used the deepest reachable history",
+          "ref_choice_overrode_deepest": false,
+          "anonymizer_tip_detected": false,
+          "development_substance": null,
+          "development_substance_note": null,
+          "development_substance_error": "the model was unavailable",
+          "real_commits": 140,
+          "mineable_commits": 41,
+          "human_authors": 5,
+          "history_probe_mode": "deterministic",
+          "history_model": null
+        },
+        "build": null
+      },
+      "material": {
+        "probe": "material_census",
+        "scored": false,
+        "provider": "claude",
+        "model": "claude-opus-5",
+        "skip_reason": "llm_disabled",
+        "logic_depth_unavailable_reason": "material census skipped (--no-llm); logic depth and self-containment are reported unscored, not zero",
+        "logic_depth": null,
+        "self_contained": null,
+        "minable_ideas_total": null,
+        "n_minable_ideas": null,
+        "defect_repairs_with_regression_test": null,
+        "n_complex_logic": null,
+        "n_substantial_features": null,
+        "n_defect_repairs": null,
+        "n_work_units": null,
+        "n_net_new_capabilities": null,
+        "n_repo_evolutions": null,
+        "n_performance_work": null,
+        "n_hardening_work": null,
+        "n_integration_work": null,
+        "task_type_counts": {
+          "total_candidates": 0,
+          "n_net_new": 0,
+          "n_agentic": 0,
+          "n_bug_repair": 0,
+          "n_repo_evolution": 0
+        },
+        "census_platform_note": "lane wall clock in seconds: digest 2, tree scan 1, history scan 1, structure 2, history depth 1, census 0, mining 0, classify 0, total 2; independent lanes ran at the same time, so the total is below their sum"
+      }
+    },
+    "codebase_repos": {
+      "id": null,
+      "codebase_id": null,
+      "service_id": null,
+      "repo_digest": "057ecd19a2a00f0c8158c8ce180f81bd72ff107a9314254600b746144db59849",
+      "real_repo_name": null,
+      "fake_repo_name": "repo-057ecd19a2a0",
+      "status": "partial",
+      "skip_reason": "llm_disabled",
+      "measured_at": "2026-10-22T04:29:08.681600+00:00",
+      "loc": 24854,
+      "zip_bytes": null,
+      "excluded_loc": null,
+      "languages": {
+        "JavaScript": 13840,
+        "Python": 10685,
+        "SQL": 329
+      },
+      "primary_language": "JavaScript",
+      "frontend_pct": null,
+      "backend_pct": null,
+      "test_loc": null,
+      "test_code_files": 22,
+      "test_spec_files": 22,
+      "test_ratio": 0.0876,
+      "test_source_ratio": "1:10",
+      "test_framework": [
+        "pytest"
+      ],
+      "has_ci": false,
+      "ci_present": false,
+      "ci_runs_tests": false,
+      "detected_frameworks": [
+        "FastAPI",
+        "SQLAlchemy",
+        "Pydantic"
+      ],
+      "commit_count": 210,
+      "author_count": 7,
+      "first_commit_at": "2026-10-06T12:13:04+05:30",
+      "last_commit_at": "2026-10-13T11:20:42+05:30",
+      "active_days": 3,
+      "span_days": 6,
+      "commits_by_month": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        140
+      ],
+      "pr_count": null,
+      "issue_count": null,
+      "repo_class": "backend",
+      "is_likely_demo": false,
+      "quality_score": null,
+      "build_ok": null,
+      "testable_at_head": null,
+      "capacity": 41
+    },
+    "mining": {
+      "repo_id": "repo-057ecd19a2a0",
+      "measurer_version": "repo-quality-evaluation-measure-ext@1",
+      "provider": "claude",
+      "model": "claude-opus-5",
+      "mined_at": "2026-10-22T04:29:08.681600+00:00",
+      "total_candidates": 0,
+      "n_net_new": 0,
+      "n_agentic": 0,
+      "n_bug_repair": 0,
+      "n_repo_evolution": 0,
+      "scored": false,
+      "mined_task_summaries": [],
+      "skip_reason": "llm_disabled",
+      "mine_unavailable_reason": "agentic mining skipped (--no-llm); task-type counts are reported as zero-because-not-run, not as measured-none"
+    },
+    "csv_preview": "id,codebase_id,service_id,repo_digest,real_repo_name,fake_repo_name,status,skip_reason,measured_at,loc,zip_bytes,excluded_loc,languages,primary_language,frontend_pct,backend_pct,test_loc,test_code_files,test_spec_files,test_ratio,test_source_ratio,test_framework,has_ci,ci_present,ci_runs_tests,detected_frameworks,commit_count,author_count,first_commit_at,last_commit_at,active_days,span_days,commits_by_month,pr_count,issue_count,repo_class,is_likely_demo,quality_score,build_ok,testable_at_head,capacity\r\n,,,057ecd19a2a00f0c8158c8ce180f81bd72ff107a9314254600b746144db59849,,repo-057ecd19a2a0,partial,llm_disabled,2026-10-22T04:29:08.681600+00:00,24854,,,\"{\"\"JavaScript\"\": 13840, \"\"Python\"\": 10685, \"\"SQL\"\": 329}\",JavaScript,,,,22,22,0.0876,1:10,\"[\"\"pytest\"\"]\",False,False,False,\"[\"\"FastAPI\"\", \"\"SQLAlchemy\"\", \"\"Pydantic\"\"]\",210,7,2026-10-06T12:13:04+05:30,2026-10-13T11:20:42+05:30,3,6,\"[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 140]\",,,backend,False,,,,41\r\n"
+  },
+  "review": {
+    "loc": 24854,
+    "primary_language": "JavaScript",
+    "commits": 210,
+    "span_days": 6
+  }
+}
