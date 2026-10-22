@@ -1,0 +1,3 @@
+"""Automated Inventory Replenishment & Min-Max Module Package."""
+from .router import router
+__all__ = ["router"]
