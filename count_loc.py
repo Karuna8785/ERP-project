@@ -1,4 +1,15 @@
 import os
+import subprocess
+
+commits = subprocess.check_output(['git', 'rev-list', '--count', 'HEAD']).decode().strip()
+log_out = subprocess.check_output(['git', 'log', '--oneline']).decode('utf-8', errors='ignore')
+merges = [l for l in log_out.splitlines() if 'merge' in l.lower()]
+prs = [l for l in log_out.splitlines() if 'merge pull request #' in l.lower()]
+
+print(f'=== GIT REPOSITORY AUDIT ===')
+print(f'Total commits: {commits}')
+print(f'Total merge commits: {len(merges)}')
+print(f'Total Pull Requests (#): {len(prs)}')
 
 languages = {
     '.py': 'Python',
@@ -24,7 +35,7 @@ for root, dirs, files in os.walk('.'):
             loc_counts[lang] = loc_counts.get(lang, 0) + c
             file_counts[lang] = file_counts.get(lang, 0) + 1
 
-print('Current prod LOC on disk (excluding tests, venv, node_modules):')
-for k, v in loc_counts.items():
-    print(f'  {k}: {v} LOC across {file_counts.get(k, 0)} files')
-print('Total prod LOC:', sum(loc_counts.values()))
+print('\n=== PRODUCTION CODE AUDIT (Excluding tests, venv, node_modules) ===')
+for k, v in sorted(loc_counts.items(), key=lambda x: -x[1]):
+    print(f'  {k}: {v:,} LOC across {file_counts.get(k, 0)} files')
+print(f'Grand Total Prod LOC: {sum(loc_counts.values()):,}')
