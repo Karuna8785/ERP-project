@@ -1,0 +1,329 @@
+"""
+Facilities & Corporate Real Estate - Enterprise Business Rule Validators
+"""
+import re
+from typing import Optional, List, Dict, Any
+
+class FacilitiesManagementValidator:
+    """Validation engine ensuring compliance with business integrity constraints."""
+
+    @staticmethod
+    def validate_facilitybuilding_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate FacilityBuilding domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_officefloorwing_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate OfficeFloorWing domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_roomdeskallocation_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate RoomDeskAllocation domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_hvaccontrolschedule_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate HVACControlSchedule domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_physicalbadgeaccesslog_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate PhysicalBadgeAccessLog domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_securityvisitorpass_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate SecurityVisitorPass domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_janitorialtasklog_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate JanitorialTaskLog domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_leasespacecontract_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate LeaseSpaceContract domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_emergencyevacuationplan_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate EmergencyEvacuationPlan domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_utilitymeterrecord_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate UtilityMeterRecord domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_parkingslotallocation_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate ParkingSlotAllocation domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_assettaglocation_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate AssetTagLocation domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_incidenthazardnotice_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate IncidentHazardNotice domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_mailroompackagelog_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate MailroomPackageLog domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_cateringrequestorder_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate CateringRequestOrder domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
+    @staticmethod
+    def validate_facilityexpensecharge_record(payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """Validate FacilityExpenseCharge domain constraints, returning validation flag and error messages."""
+        errors = []
+        code = payload.get("code", "")
+        if not code or len(code.strip()) < 2:
+            errors.append("Field 'code' must be at least 2 characters")
+        elif not re.match(r"^[A-Z0-9_\-]+$", code):
+            errors.append("Field 'code' must contain only uppercase alphanumeric characters, dashes, or underscores")
+        title = payload.get("title", "")
+        if not title or len(title.strip()) < 3:
+            errors.append("Field 'title' must be at least 3 characters")
+        amount = payload.get("amount", 0.0)
+        if amount is not None and amount < 0:
+            errors.append("Field 'amount' cannot be negative")
+        quantity = payload.get("quantity", 0.0)
+        if quantity is not None and quantity < 0:
+            errors.append("Field 'quantity' cannot be negative")
+        return len(errors) == 0, errors
+
